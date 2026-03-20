@@ -1,23 +1,25 @@
-import Navbar from './sections/Navbar';
+import Navbar from './components/Navbar';
 import HeroSection from './sections/HeroSection';
-import AboutSection from './sections/AboutSection';
-import ModelsSection from './sections/ModelsSection';
-import ProductsSection from './sections/ProductsSection';
-import CollectionSection from './sections/CollectionSection';
-import Footer from './sections/Footer';
+import StudioSection from './sections/StudioSection';
+import ServicesSection from './sections/ServicesSection';
+import ForHimSection from './sections/ForHimSection';
+import ForHerSection from './sections/ForHerSection';
+import BarbersSection from './sections/BarbersSection';
+import CutCollectionSection from './sections/CutCollectionSection';
 
 function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen">
       <Navbar />
       <main>
         <HeroSection />
-        <AboutSection />
-        <ModelsSection />
-        <ProductsSection />
-        <CollectionSection />
+        <StudioSection />
+        <ServicesSection />
+        <ForHimSection />
+        <ForHerSection />
+        <BarbersSection />
+        <CutCollectionSection />
       </main>
-      <Footer />
     </div>
   );
 }

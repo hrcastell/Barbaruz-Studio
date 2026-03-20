@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,26 +6,36 @@
 
 @layer base {
   :root {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 0 0% 95%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 0 0% 95%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 95%;
+    /* Barbaruz Studios Color Palette */
+    --background: 30 10% 15%;
+    --foreground: 40 20% 90%;
+    --card: 30 8% 20%;
+    --card-foreground: 40 20% 90%;
+    --popover: 30 8% 18%;
+    --popover-foreground: 40 20% 90%;
+    --primary: 40 20% 85%;
+    --primary-foreground: 30 10% 10%;
+    --secondary: 30 8% 25%;
+    --secondary-foreground: 40 20% 90%;
+    --muted: 30 8% 30%;
+    --muted-foreground: 40 10% 60%;
+    --accent: 35 15% 45%;
+    --accent-foreground: 30 10% 10%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 0 0% 80%;
-    --radius: 0.5rem;
+    --border: 30 8% 30%;
+    --input: 30 8% 25%;
+    --ring: 40 20% 70%;
+    --radius: 0.75rem;
+    
+    /* Custom Barbaruz Colors */
+    --barbaruz-bg: #3D3830;
+    --barbaruz-bg-dark: #2A2620;
+    --barbaruz-bg-light: #5A5448;
+    --barbaruz-text: #E8E4DC;
+    --barbaruz-text-muted: #9A9588;
+    --barbaruz-accent: #6B6558;
+    --barbaruz-button: #4A4540;
   }
 }
 
@@ -41,10 +51,13 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #5A5448 0%, #3D3830 50%, #2A2620 100%);
+    min-height: 100vh;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
   }
 }
 
