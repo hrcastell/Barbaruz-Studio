@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import './styles/fonts.css';
 
 @tailwind base;
 @tailwind components;
@@ -50,13 +50,13 @@
   
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Neue Haas Display', -apple-system, BlinkMacSystemFont, sans-serif;
     background: linear-gradient(180deg, #5A5448 0%, #3D3830 50%, #2A2620 100%);
     min-height: 100vh;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Neue Haas Display', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 600;
   }
 }

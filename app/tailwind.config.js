@@ -4,6 +4,11 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Neue Haas Display', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        display: ['Neue Haas Display', 'sans-serif'],
+        handwriting: ['Reenie Beanie', 'cursive'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

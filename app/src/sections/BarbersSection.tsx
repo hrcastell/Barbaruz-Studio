@@ -8,14 +8,14 @@ interface Barber {
 }
 
 const barbers: Barber[] = [
-  { id: 1, name: 'TOWER', image: '/images/barber-1.jpg', link: 'https://www.instagram.com/barbaruz.tower' },
-  { id: 2, name: 'VITALI', image: '/images/barber-2.jpg', link: 'https://www.instagram.com/barbaruz.vitali' },
-  { id: 3, name: 'CAICEDO', image: '/images/barber-3.jpg', link: 'https://www.instagram.com/barbaruz.caicedo' },
-  { id: 4, name: 'BUENO', image: '/images/barber-4.jpg', link: 'https://www.instagram.com/barbaruz.bueno' },
-  { id: 5, name: 'BRAULIO', image: '/images/barber-5.jpg', link: 'https://www.instagram.com/barbaruz.braulio' },
-  { id: 6, name: 'ALARCÓN', image: '/images/barber-6.jpg', link: 'https://www.instagram.com/barbaruz.alarcon' },
-  { id: 7, name: 'JOAN', image: '/images/barber-7.jpg', link: 'https://www.instagram.com/barbaruz.joan' },
-  { id: 8, name: 'KOTE', image: '/images/barber-8.jpg', link: 'https://www.instagram.com/barbaruz.kote' },
+  { id: 1, name: 'KOTE', image: './images/barber-8.png', link: 'https://www.instagram.com/barbaruz.kote' },
+  { id: 2, name: 'VITALI', image: './images/barber-2.png', link: 'https://www.instagram.com/barbaruz.vitali' },
+  { id: 3, name: 'CAICEDO', image: './images/barber-3.png', link: 'https://www.instagram.com/barbaruz.caicedo' },
+  { id: 4, name: 'BUENO', image: './images/barber-4.png', link: 'https://www.instagram.com/barbaruz.bueno' },
+  { id: 5, name: 'BRAULIO', image: './images/barber-5.png', link: 'https://www.instagram.com/barbaruz.braulio' },
+  { id: 6, name: 'ALARCÓN', image: './images/barber-6.png', link: 'https://www.instagram.com/barbaruz.alarcon' },
+  { id: 7, name: 'JOAN', image: './images/barber-7.png', link: 'https://www.instagram.com/barbaruz.joan' },
+  { id: 8, name: 'TOWER', image: './images/barber-1.png', link: 'https://www.instagram.com/barbaruz.tower' },
 ];
 
 const BarbersSection = () => {
@@ -23,7 +23,9 @@ const BarbersSection = () => {
 
   return (
     <section id="barbers" className="relative w-full min-h-screen py-24 px-6 lg:px-12">
-      <div className="max-w-7xl mx-auto">
+      {/* Background - Degradado Oscuro a Claro */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#1D1C19] to-[#837E71]" />
+      <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {barbers.map((barber) => (
             <a
@@ -38,7 +40,7 @@ const BarbersSection = () => {
               <img
                 src={barber.image}
                 alt={barber.name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';

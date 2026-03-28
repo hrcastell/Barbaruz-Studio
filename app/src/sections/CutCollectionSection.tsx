@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const cutCollectionImages = [
-  { id: 1, src: '/images/cut-1.jpg', alt: 'Haircut Style 1' },
-  { id: 2, src: '/images/cut-2.jpg', alt: 'Haircut Style 2' },
-  { id: 3, src: '/images/cut-3.jpg', alt: 'Haircut Style 3' },
-  { id: 4, src: '/images/cut-4.jpg', alt: 'Haircut Style 4' },
-  { id: 5, src: '/images/cut-5.jpg', alt: 'Haircut Style 5' },
+  { id: 1, src: './images/cut-1.jpg', alt: 'Haircut Style 1' },
+  { id: 2, src: './images/cut-2.jpg', alt: 'Haircut Style 2' },
+  { id: 3, src: './images/cut-3.jpg', alt: 'Haircut Style 3' },
+  { id: 4, src: './images/cut-4.jpg', alt: 'Haircut Style 4' },
+  { id: 5, src: './images/cut-5.jpg', alt: 'Haircut Style 5' },
 ];
 
 const CutCollectionSection = () => {
@@ -57,7 +57,9 @@ const CutCollectionSection = () => {
 
   return (
     <section id="cutcollection" className="relative w-full min-h-screen py-24 px-6 lg:px-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto h-full">
+      {/* Background - Degradado Claro a Oscuro */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#837E71] to-[#1D1C19]" />
+      <div className="relative max-w-7xl mx-auto h-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           <div className="flex items-center justify-center lg:justify-start">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider text-[#E8E4DC]">

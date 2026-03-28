@@ -1,83 +1,97 @@
 import { useState } from 'react';
+import FullscreenModal from '@/components/FullscreenModal';
+import ForHimSection from './ForHimSection';
+import ForHerSection from './ForHerSection';
 
 const ServicesSection = () => {
-  const [activeService, setActiveService] = useState<'him' | 'her' | null>(null);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const [activeModal, setActiveModal] = useState<'him' | 'her' | null>(null);
 
   return (
-    <section id="services" className="relative w-full min-h-screen py-24 px-6 lg:px-12">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center min-h-[80vh]">
-          {/* For Him */}
-          <button
-            onClick={() => scrollToSection('for-him')}
-            onMouseEnter={() => setActiveService('him')}
-            onMouseLeave={() => setActiveService(null)}
-            className="group relative aspect-[3/4] max-w-sm mx-auto w-full rounded-3xl overflow-hidden border border-[#6B6558]/30 hover:border-[#6B6558]/60 transition-all duration-500 cursor-pointer"
-          >
-            <img
-              src="/images/for-him.jpg"
-              alt="For Him"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                target.nextElementSibling?.classList.remove('hidden');
-              }}
-            />
-            <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
-            
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 
-                className={`text-4xl md:text-5xl text-[#E8E4DC]/90 tracking-wider rotate-[-5deg] transition-all duration-500 ${
-                  activeService === 'him' ? 'scale-110' : ''
-                }`}
-                style={{ fontFamily: 'cursive' }}
-              >
-                For Him
-              </h2>
-            </div>
-          </button>
+    <>
+      <section id="services" className="relative w-full min-h-screen py-24 px-6 lg:px-12">
+        {/* Background - Degradado Claro a Oscuro */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#837E71] to-[#1D1C19]" />
 
-          {/* For Her */}
-          <button
-            onClick={() => scrollToSection('for-her')}
-            onMouseEnter={() => setActiveService('her')}
-            onMouseLeave={() => setActiveService(null)}
-            className="group relative aspect-[3/4] max-w-sm mx-auto w-full rounded-3xl overflow-hidden border border-[#6B6558]/30 hover:border-[#6B6558]/60 transition-all duration-500 cursor-pointer"
-          >
-            <img
-              src="/images/for-her.jpg"
-              alt="For Her"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                target.nextElementSibling?.classList.remove('hidden');
+        <div className="relative max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center min-h-[80vh]">
+            {/* For Him Card */}
+            <button
+              onClick={() => setActiveModal('him')}
+              className="group relative w-full max-w-[404.56px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1] hover:border-[#E8E4DC] transition-all duration-500 cursor-pointer"
+              style={{
+                height: '715px',
+                borderRadius: '45.25px'
               }}
-            />
-            <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
-            
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h2 
-                className={`text-4xl md:text-5xl text-[#E8E4DC]/90 tracking-wider rotate-[-5deg] transition-all duration-500 ${
-                  activeService === 'her' ? 'scale-110' : ''
-                }`}
-                style={{ fontFamily: 'cursive' }}
-              >
-                For Her
-              </h2>
-            </div>
-          </button>
+            >
+              <img
+                src="./images/model-1.png"
+                alt="For Him"
+                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
+
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <h2
+                  className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting"
+                >
+                  For Him
+                </h2>
+              </div>
+            </button>
+
+            {/* For Her Card */}
+            <button
+              onClick={() => setActiveModal('her')}
+              className="group relative w-full max-w-[404.56px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1] hover:border-[#E8E4DC] transition-all duration-500 cursor-pointer"
+              style={{
+                height: '715px',
+                borderRadius: '45.25px'
+              }}
+            >
+              <img
+                src="./images/model-2.png"
+                alt="For Her"
+                className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-105"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  target.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+              <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
+
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <h2
+                  className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting"
+                >
+                  For Her
+                </h2>
+              </div>
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Modales Fullscreen */}
+      <FullscreenModal
+        open={activeModal === 'him'}
+        onClose={() => setActiveModal(null)}
+      >
+        <ForHimSection />
+      </FullscreenModal>
+
+      <FullscreenModal
+        open={activeModal === 'her'}
+        onClose={() => setActiveModal(null)}
+      >
+        <ForHerSection />
+      </FullscreenModal>
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Detectar sección activa
-      const sections = ['home', 'studio', 'services', 'for-him', 'for-her', 'barbers', 'cutcollection'];
+      const sections = ['home', 'studio', 'services', 'barbers', 'cutcollection'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {

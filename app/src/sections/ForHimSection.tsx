@@ -29,16 +29,22 @@ const services: Service[] = [
 
 const ForHimSection = () => {
   return (
-    <section id="for-him" className="relative w-full min-h-screen py-24 px-6 lg:px-12">
+    <div className="relative w-full min-h-screen py-24 px-6 lg:px-12 bg-gradient-to-b from-[#837E71] to-[#1D1C19]">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Image */}
-          <div className="relative">
-            <div className="relative aspect-[3/4] max-w-sm mx-auto rounded-3xl overflow-hidden border border-[#6B6558]/30">
+          <div className="relative flex justify-center">
+            <div
+              className="relative w-full max-w-[404.56px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1]"
+              style={{
+                height: '715px',
+                borderRadius: '45.25px'
+              }}
+            >
               <img
-                src="/images/for-him-services.jpg"
+                src="./images/model-1.png"
                 alt="For Him Services"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
@@ -46,13 +52,12 @@ const ForHimSection = () => {
                 }}
               />
               <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
-              
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h2 
-                  className="text-4xl md:text-5xl text-[#E8E4DC]/80 tracking-wider rotate-[-10deg]" 
-                  style={{ fontFamily: 'cursive' }}
+
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <h2
+                  className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting"
                 >
-                  good jobs
+                  For Him
                 </h2>
               </div>
             </div>
@@ -79,7 +84,7 @@ const ForHimSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
