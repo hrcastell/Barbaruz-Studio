@@ -1,16 +1,20 @@
 import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const cutCollectionImages = [
-  { id: 1, src: './images/cut-1.jpg', alt: 'Haircut Style 1' },
-  { id: 2, src: './images/cut-2.jpg', alt: 'Haircut Style 2' },
-  { id: 3, src: './images/cut-3.jpg', alt: 'Haircut Style 3' },
-  { id: 4, src: './images/cut-4.jpg', alt: 'Haircut Style 4' },
-  { id: 5, src: './images/cut-5.jpg', alt: 'Haircut Style 5' },
+  { id: 1, src: './images/CORNROWS.jpg', alt: 'Cornrows' },
+  { id: 2, src: './images/BIXIE.jpg', alt: 'Bixie' },
+  { id: 3, src: './images/BUZZCUT.jpg', alt: 'Buzzcut' },
+  { id: 4, src: './images/FRENCH.jpg', alt: 'French' },
+  { id: 5, src: './images/LOCS.jpg', alt: 'Locs' },
+  { id: 6, src: './images/BLUNT.jpg', alt: 'Blunt' },
+  { id: 7, src: './images/TEXTURED.jpg', alt: 'Textured' },
+  { id: 8, src: './images/WOLF.jpg', alt: 'Wolf' },
 ];
 
 const CutCollectionSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % cutCollectionImages.length);
@@ -18,6 +22,33 @@ const CutCollectionSection = () => {
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + cutCollectionImages.length) % cutCollectionImages.length);
+  };
+
+  // Touch handlers for mobile swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (distance > minSwipeDistance) {
+      // Swipe left - next slide
+      nextSlide();
+    } else if (distance < -minSwipeDistance) {
+      // Swipe right - previous slide
+      prevSlide();
+    }
+
+    setTouchStart(0);
+    setTouchEnd(0);
   };
 
   useEffect(() => {
@@ -67,13 +98,23 @@ const CutCollectionSection = () => {
             </h1>
           </div>
 
-          <div className="relative h-[500px] md:h-[600px] flex items-center justify-center">
-            <div className="relative w-full max-w-sm aspect-[3/4]">
+          <div className="relative flex items-center justify-center" style={{ height: '770px' }}>
+            <div
+              className="relative w-full max-w-[448px] mx-auto lg:ml-[168px]"
+              style={{ height: '770px' }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
               {cutCollectionImages.map((image, index) => (
                 <div
                   key={image.id}
-                  className="absolute inset-0 rounded-3xl overflow-hidden border border-[#6B6558]/30 transition-all duration-500 ease-out"
-                  style={getSlideStyle(index)}
+                  className="absolute inset-0 overflow-hidden transition-all duration-500 ease-out"
+                  style={{
+                    ...getSlideStyle(index),
+                    border: '1.4px solid #D5CFC1',
+                    borderRadius: '35px'
+                  }}
                 >
                   <img
                     src={image.src}
@@ -89,36 +130,6 @@ const CutCollectionSection = () => {
                     <span className="text-[#9A9588] text-sm">{image.alt}</span>
                   </div>
                 </div>
-              ))}
-            </div>
-
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 lg:-left-12 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#4A4540]/80 hover:bg-[#5A5448] text-[#E8E4DC] flex items-center justify-center transition-all duration-300 z-40"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 lg:-right-12 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#4A4540]/80 hover:bg-[#5A5448] text-[#E8E4DC] flex items-center justify-center transition-all duration-300 z-40"
-              aria-label="Next slide"
-            >
-              <ChevronRight size={24} />
-            </button>
-
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex space-x-2 z-40">
-              {cutCollectionImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                    index === currentIndex
-                      ? 'bg-[#E8E4DC] w-6'
-                      : 'bg-[#6B6558] hover:bg-[#9A9588]'
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
               ))}
             </div>
           </div>

@@ -22,18 +22,22 @@ const BarbersSection = () => {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <section id="barbers" className="relative w-full min-h-screen py-24 px-6 lg:px-12">
+    <section id="barbers" className="relative w-full min-h-screen py-24 px-4 lg:px-12">
       {/* Background - Degradado Oscuro a Claro */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#1D1C19] to-[#837E71]" />
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 justify-items-center">
           {barbers.map((barber) => (
             <a
               key={barber.id}
               href={barber.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-square rounded-3xl overflow-hidden border border-[#6B6558]/30 hover:border-[#6B6558]/60 transition-all duration-500"
+              className="group relative overflow-hidden transition-all duration-500 w-full max-w-[300px] aspect-square"
+              style={{
+                border: '1px solid #D5CFC1',
+                borderRadius: '20px'
+              }}
               onMouseEnter={() => setHoveredId(barber.id)}
               onMouseLeave={() => setHoveredId(null)}
             >

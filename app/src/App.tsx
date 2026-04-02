@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import HeroSection from './sections/HeroSection';
 import StudioSection from './sections/StudioSection';
 import ServicesSection from './sections/ServicesSection';
@@ -16,6 +17,7 @@ function App() {
         <BarbersSection />
         <CutCollectionSection />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -28,21 +28,18 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-8 w-full h-full flex flex-col items-center justify-center px-5">
+      <div className="relative z-8 w-full h-full flex flex-col items-center justify-center px-4">
         {/* Main Taglines Container - 545x215 */}
-        <div
-          className="text-center mb-8"
-          style={{ width: '520px', height: '215px', maxWidth: '80vw' }}
-        >
-          <h1 className="text-5xl md:text-4xl lg:text-7xl font-semibold tracking-wide leading-tight">
+        <div className="text-center mb-8 w-full max-w-[520px]">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-wide leading-tight">
             <span className="text-[#D5CFC1]">GOOD</span>
             <span className="text-[#D5CFC1] font-light">STUDIOS</span>
           </h1>
-          <h1 className="text-5xl md:text-4xl lg:text-7xl font-semibold tracking-wide leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-wide leading-tight">
             <span className="text-[#D5CFC1]">GOOD</span>
             <span className="text-[#D5CFC1] font-light">CUTS</span>
           </h1>
-          <h1 className="text-5xl md:text-4xl lg:text-7xl font-semibold tracking-wide leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold tracking-wide leading-tight">
             <span className="text-[#D5CFC1]">GOOD</span>
             <span className="text-[#D5CFC1] font-light">SHAVES</span>
           </h1>

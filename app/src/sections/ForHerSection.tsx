@@ -64,21 +64,38 @@ const ForHerSection = () => {
           </div>
 
           {/* Right Content - Services List */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             {services.map((service) => (
-              <div 
+              <div
                 key={service.name}
-                className="group border-b border-[#6B6558]/50 pb-6 hover:border-[#E8E4DC]/50 transition-colors duration-300"
+                className="group relative"
               >
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-xl md:text-2xl font-medium tracking-wider text-[#E8E4DC]">
-                    {service.name}
-                  </h3>
-                  <span className="text-lg text-[#9A9588]">{service.price}</span>
-                </div>
-                <p className="text-sm text-[#9A9588] tracking-wide">
+                <h3 className="text-xl md:text-2xl font-medium tracking-wider text-[#E8E4DC] mb-2">
+                  {service.name}
+                </h3>
+                <p className="text-sm text-[#9A9588] tracking-wide mb-4">
                   {service.description}
                 </p>
+
+                {/* Price above line */}
+                <div className="text-right mb-2">
+                  <span
+                    className="inline-block text-[#9A9588] text-center"
+                    style={{
+                      fontSize: '24px',
+                      fontWeight: 300,
+                      lineHeight: '19px'
+                    }}
+                  >
+                    {service.price}
+                  </span>
+                </div>
+
+                {/* Separator line */}
+                <div
+                  className="w-full transition-opacity duration-300"
+                  style={{ border: '1px solid #FFFFFF' }}
+                />
               </div>
             ))}
           </div>

@@ -15,12 +15,12 @@ const StudioSection = () => {
           <div className="flex flex-col items-center justify-center space-y-12">
 
             {/* Textos Centrados - MÁS GRANDES */}
-            <div className="flex flex-col items-center space-y-4 text-center">
+            <div className="flex flex-col items-center space-y-4 text-center px-4">
               <h2
                 className="font-display font-normal tracking-wide text-[#E8E4DC] uppercase"
                 style={{
-                  fontSize: '37.81px',
-                  lineHeight: '1.2',
+                  fontSize: 'clamp(24px, 5vw, 37.81px)',
+                  lineHeight: '1',
                   letterSpacing: '0.02em'
                 }}
               >
@@ -29,8 +29,8 @@ const StudioSection = () => {
               <p
                 className="font-display font-normal tracking-wider text-[#9A9588] uppercase"
                 style={{
-                  fontSize: '30.25px',
-                  lineHeight: '1.2',
+                  fontSize: 'clamp(18px, 4vw, 30.25px)',
+                  lineHeight: '1',
                   letterSpacing: '0.05em'
                 }}
               >
@@ -39,7 +39,7 @@ const StudioSection = () => {
             </div>
 
             {/* Línea separadora centrada */}
-            <div className="w-80 h-px bg-[#6B6558]" />
+            <div className="w-80 h-px bg-[#ffffff]" />
 
             {/* Ícono de ubicación centrado - 103x104px */}
             <a
@@ -57,7 +57,7 @@ const StudioSection = () => {
           </div>
 
           {/* Columna Derecha - Imagen del Studio */}
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative flex justify-center lg:justify-end" style={{ marginLeft: '160px' }}>
             {/* Contenedor de la imagen - Capa 2 */}
             <div
               className="relative overflow-hidden border-[0.91px] border-[#D5CFC1]"
@@ -86,14 +86,14 @@ const StudioSection = () => {
             {/* THE STUDIO - Capa 3 (FRONTAL) - Fuera del marco, sobresale completamente */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
               <h3
-                className="font-handwriting text-[#E8E4DC] text-center leading-none whitespace-nowrap"
+                className="font-handwriting text-[#E8E4DC] text-center leading-none"
                 style={{
-                  fontSize: '150px',
+                  fontSize: 'clamp(60px, 20vw, 100px)',
                   transform: 'rotate(-5deg)',
                   textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
                 }}
               >
-                THE STUDIO
+              THE STUDIO
               </h3>
             </div>
           </div>

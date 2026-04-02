@@ -46,23 +46,25 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-[#3D3830]/95 backdrop-blur-md py-4'
-          : 'bg-transparent py-6'
+          ? 'bg-[#3D3830]/70 backdrop-blur-md py-3'
+          : 'bg-transparent py-4'
       }`}
     >
-      <div className="w-full px-6 lg:px-12">
+      <div className="w-full px-4 md:px-6 lg:px-12">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <button 
+          <button
             onClick={() => scrollToSection('home')}
-            className="flex flex-col cursor-pointer"
+            className="cursor-pointer transition-all duration-500"
           >
-            <span className="text-xl font-semibold tracking-wide text-[#E8E4DC] leading-tight">
-              barbaruz
-            </span>
-            <span className="text-lg font-semibold tracking-wide text-[#E8E4DC] leading-tight">
-              studios
-            </span>
+            <img
+              src={isScrolled ? './images/LOGO FOOTER.png' : './images/LOGO BAR.png'}
+              alt="Barbaruz Studios"
+              className="h-8 md:h-10 w-auto transition-all duration-500"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = 'none';
+              }}
+            />
           </button>
 
           {/* Desktop Navigation */}
@@ -102,7 +104,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-[#3D3830]/95 backdrop-blur-md transition-all duration-300 ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-[#3D3830]/90 backdrop-blur-md transition-all duration-300 ${
           isMobileMenuOpen
             ? 'opacity-100 translate-y-0'
             : 'opacity-0 -translate-y-4 pointer-events-none'
