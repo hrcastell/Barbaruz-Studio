@@ -35,16 +35,17 @@ const ForHerSection = () => {
           {/* Left Image */}
           <div className="relative flex justify-center">
             <div
-              className="relative w-full max-w-[404.56px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1]"
+              className="relative w-full max-w-[404px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1]"
               style={{
-                height: '715px',
+                aspectRatio: '404 / 715',
+                maxHeight: '68vh',
                 borderRadius: '45.25px'
               }}
             >
               <img
                 src="./images/model-2.png"
                 alt="For Her Services"
-                className="w-full h-full object-contain object-center"
+                className="w-full h-full object-cover object-center"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';

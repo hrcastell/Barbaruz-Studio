@@ -8,14 +8,15 @@ interface Barber {
 }
 
 const barbers: Barber[] = [
-  { id: 1, name: 'KOTE', image: './images/barber-8.png', link: 'https://www.instagram.com/barbaruz.kote' },
-  { id: 2, name: 'VITALI', image: './images/barber-2.png', link: 'https://www.instagram.com/barbaruz.vitali' },
-  { id: 3, name: 'CAICEDO', image: './images/barber-3.png', link: 'https://www.instagram.com/barbaruz.caicedo' },
-  { id: 4, name: 'BUENO', image: './images/barber-4.png', link: 'https://www.instagram.com/barbaruz.bueno' },
-  { id: 5, name: 'BRAULIO', image: './images/barber-5.png', link: 'https://www.instagram.com/barbaruz.braulio' },
-  { id: 6, name: 'ALARCÓN', image: './images/barber-6.png', link: 'https://www.instagram.com/barbaruz.alarcon' },
-  { id: 7, name: 'JOAN', image: './images/barber-7.png', link: 'https://www.instagram.com/barbaruz.joan' },
-  { id: 8, name: 'TOWER', image: './images/barber-1.png', link: 'https://www.instagram.com/barbaruz.tower' },
+  { id: 1, name: 'KOTE', image: './images/KOTE.png', link: 'https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377/profesional/566163' },
+  { id: 2, name: 'TOWER', image: './images/TOWER.png', link: 'https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377/profesional/532850' },
+  { id: 3, name: 'BRAULIO', image: './images/BRAULIO.png', link: 'https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377/profesional/375300' },
+  { id: 4, name: 'VITALI', image: './images/VITALI.png', link: 'https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377/profesional/463540' },
+  { id: 5, name: 'BUENO', image: './images/BUENO.png', link: 'https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377/profesional/704084' },
+  { id: 6, name: 'JOAN', image: './images/JOAN.png', link: 'https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377/profesional/375303' },
+  { id: 7, name: 'CAICEDO', image: './images/CAICEDO.png', link: 'https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377/profesional/375304' },
+  { id: 8, name: 'ALARCÓN', image: './images/ALARCON.png', link: 'https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377/profesional/533665' },
+  
 ];
 
 const BarbersSection = () => {

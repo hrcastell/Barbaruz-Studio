@@ -27,7 +27,7 @@ const StudioSection = () => {
                 MADE IN BARBARUZ
               </h2>
               <p
-                className="font-display font-normal tracking-wider text-[#9A9588] uppercase"
+                className="font-display font-light tracking-wider text-[#9A9588] uppercase"
                 style={{
                   fontSize: 'clamp(18px, 4vw, 30.25px)',
                   lineHeight: '1',
@@ -57,15 +57,14 @@ const StudioSection = () => {
           </div>
 
           {/* Columna Derecha - Imagen del Studio */}
-          <div className="relative flex justify-center lg:justify-end" style={{ marginLeft: '160px' }}>
+          <div className="relative flex justify-center lg:justify-end lg:ml-[160px]">
             {/* Contenedor de la imagen - Capa 2 */}
             <div
               className="relative overflow-hidden border-[0.91px] border-[#D5CFC1]"
               style={{
-                width: '447px',
-                height: '790px',
-                maxWidth: '90vw',
-                borderRadius: '45.25px'
+                width: 'min(447px, 62vw)',
+                aspectRatio: '447 / 790',
+                borderRadius: 'min(45.25px, 6vw)'
               }}
             >
               <img
@@ -88,7 +87,7 @@ const StudioSection = () => {
               <h3
                 className="font-handwriting text-[#E8E4DC] text-center leading-none"
                 style={{
-                  fontSize: 'clamp(60px, 20vw, 100px)',
+                  fontSize: 'clamp(60px, 24vw, 110px)',
                   transform: 'rotate(-5deg)',
                   textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
                 }}

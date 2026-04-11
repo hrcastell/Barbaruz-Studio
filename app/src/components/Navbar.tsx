@@ -74,9 +74,11 @@ const Navbar = () => {
                 key={link.name}
                 onClick={() => scrollToSection(link.id)}
                 className={`text-sm tracking-wider uppercase transition-colors duration-300 cursor-pointer ${
-                  activeSection === link.id
-                    ? 'text-[#E8E4DC]'
-                    : 'text-[#9A9588] hover:text-[#E8E4DC]'
+                  !isScrolled
+                    ? 'text-[#1D1C19] hover:text-[#4A4540]'
+                    : activeSection === link.id
+                      ? 'text-[#E8E4DC]'
+                      : 'text-[#9A9588] hover:text-[#E8E4DC]'
                 }`}
               >
                 {link.name}

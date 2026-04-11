@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 
 const cutCollectionImages = [
-  { id: 1, src: './images/CORNROWS.jpg', alt: 'Cornrows' },
+  { id: 1, src: './images/BUZZCUT.jpg', alt: 'Buzzcut' },
   { id: 2, src: './images/BIXIE.jpg', alt: 'Bixie' },
-  { id: 3, src: './images/BUZZCUT.jpg', alt: 'Buzzcut' },
+  { id: 3, src: './images/MULLET.jpg', alt: 'Mullet' },
   { id: 4, src: './images/FRENCH.jpg', alt: 'French' },
-  { id: 5, src: './images/LOCS.jpg', alt: 'Locs' },
+  { id: 5, src: './images/TEXTURED.jpg', alt: 'Textured' },
   { id: 6, src: './images/BLUNT.jpg', alt: 'Blunt' },
-  { id: 7, src: './images/TEXTURED.jpg', alt: 'Textured' },
+  { id: 7, src: './images/LAYERED.jpg', alt: 'Layered' },
   { id: 8, src: './images/WOLF.jpg', alt: 'Wolf' },
+   
 ];
 
 const CutCollectionSection = () => {
@@ -87,21 +88,25 @@ const CutCollectionSection = () => {
   };
 
   return (
-    <section id="cutcollection" className="relative w-full min-h-screen py-24 px-6 lg:px-12 overflow-hidden">
+    <section id="cutcollection" className="relative w-full min-h-screen py-16 lg:py-24 px-6 lg:px-12 overflow-hidden">
       {/* Background - Degradado Claro a Oscuro */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#837E71] to-[#1D1C19]" />
       <div className="relative max-w-7xl mx-auto h-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="flex items-center justify-center lg:justify-start">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider text-[#E8E4DC]">
               CUTCOLLECTION
             </h1>
           </div>
 
-          <div className="relative flex items-center justify-center" style={{ height: '770px' }}>
+          <div className="relative flex items-center justify-center">
             <div
-              className="relative w-full max-w-[448px] mx-auto lg:ml-[168px]"
-              style={{ height: '770px' }}
+              className="relative mx-auto lg:ml-[80px] xl:ml-[120px]"
+              style={{
+                width: 'min(360px, 60vw)',
+                aspectRatio: '448 / 770',
+                maxHeight: '65vh'
+              }}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}

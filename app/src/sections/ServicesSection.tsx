@@ -13,13 +13,14 @@ const ServicesSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[#837E71] to-[#1D1C19]" />
 
         <div className="relative max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center min-h-[80vh]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center py-8">
             {/* For Him Card */}
             <button
               onClick={() => setActiveModal('him')}
-              className="group relative w-full max-w-[404.56px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1] hover:border-[#E8E4DC] transition-all duration-500 cursor-pointer"
+              className="group relative w-full max-w-[404px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1] hover:border-[#E8E4DC] transition-all duration-500 cursor-pointer"
               style={{
-                height: '715px',
+                aspectRatio: '404 / 715',
+                maxHeight: '68vh',
                 borderRadius: '45.25px'
               }}
             >
@@ -36,9 +37,7 @@ const ServicesSection = () => {
               <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
 
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <h2
-                  className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting"
-                >
+                <h2 className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting">
                   For Him
                 </h2>
               </div>
@@ -47,16 +46,17 @@ const ServicesSection = () => {
             {/* For Her Card */}
             <button
               onClick={() => setActiveModal('her')}
-              className="group relative w-full max-w-[404.56px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1] hover:border-[#E8E4DC] transition-all duration-500 cursor-pointer"
+              className="group relative w-full max-w-[404px] mx-auto overflow-hidden border-[0.91px] border-[#D5CFC1] hover:border-[#E8E4DC] transition-all duration-500 cursor-pointer"
               style={{
-                height: '715px',
+                aspectRatio: '404 / 715',
+                maxHeight: '68vh',
                 borderRadius: '45.25px'
               }}
             >
               <img
                 src="./images/model-2.png"
                 alt="For Her"
-                className="w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
@@ -66,9 +66,7 @@ const ServicesSection = () => {
               <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
 
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <h2
-                  className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting"
-                >
+                <h2 className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting">
                   For Her
                 </h2>
               </div>
