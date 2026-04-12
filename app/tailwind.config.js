@@ -7,7 +7,7 @@ module.exports = {
       fontFamily: {
         sans: ['Neue Haas Display', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         display: ['Neue Haas Display', 'sans-serif'],
-        handwriting: ['Reenie Beanie', 'cursive'],
+        handwriting: ['Gloria Hallelujah', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -1,11 +1,4 @@
 const HeroSection = () => {
-  const scrollToServices = () => {
-    const element = document.getElementById('services');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section
       id="home"
@@ -46,12 +39,14 @@ const HeroSection = () => {
         </div>
 
         {/* RESERVA Button */}
-        <button
-          onClick={scrollToServices}
-          className="px-12 py-3 bg-[#8B8378] text-[#E8E4DC] text-sm tracking-widest uppercase rounded hover:bg-[#9A9080] transition-all duration-400 cursor-pointer"
+        <a
+          href="https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-12 py-3 bg-[#8B8378] text-[#E8E4DC] text-sm font-bold uppercase rounded hover:bg-[#9A9080] transition-all duration-400 cursor-pointer"
         >
           RESERVA
-        </button>
+        </a>
       </div>
     </section>
   );

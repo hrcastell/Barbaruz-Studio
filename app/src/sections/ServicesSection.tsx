@@ -37,7 +37,7 @@ const ServicesSection = () => {
               <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
 
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <h2 className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting">
+                <h2 className="text-[36px] md:text-[48px] lg:text-[64px] text-[#E8E4DC] tracking-wider font-handwriting">
                   For Him
                 </h2>
               </div>
@@ -66,7 +66,7 @@ const ServicesSection = () => {
               <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620]" />
 
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <h2 className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting">
+                <h2 className="text-[36px] md:text-[48px] lg:text-[64px] text-[#E8E4DC] tracking-wider font-handwriting">
                   For Her
                 </h2>
               </div>

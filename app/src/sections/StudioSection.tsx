@@ -57,18 +57,19 @@ const StudioSection = () => {
           </div>
 
           {/* Columna Derecha - Imagen del Studio */}
-          <div className="relative flex justify-center lg:justify-end lg:ml-[160px]">
+          <div className="relative flex justify-center lg:justify-end lg:ml-[80px]">
             {/* Contenedor de la imagen - Capa 2 */}
             <div
               className="relative overflow-hidden border-[0.91px] border-[#D5CFC1]"
               style={{
-                width: 'min(447px, 62vw)',
+                width: 'min(340px, 46vw)',
                 aspectRatio: '447 / 790',
+                maxHeight: '72vh',
                 borderRadius: 'min(45.25px, 6vw)'
               }}
             >
               <img
-                src="./images/studio-interior.png"
+                src="./images/STUDIO.png"
                 alt="The Studio"
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -80,20 +81,20 @@ const StudioSection = () => {
               <div className="hidden absolute inset-0 bg-gradient-to-b from-[#4A4540] to-[#2A2620] flex items-center justify-center">
                 <span className="text-[#9A9588]">Studio Interior</span>
               </div>
-            </div>
 
-            {/* THE STUDIO - Capa 3 (FRONTAL) - Fuera del marco, sobresale completamente */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-              <h3
-                className="font-handwriting text-[#E8E4DC] text-center leading-none"
-                style={{
-                  fontSize: 'clamp(60px, 24vw, 110px)',
-                  transform: 'rotate(-5deg)',
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
-                }}
-              >
-              THE STUDIO
-              </h3>
+              {/* THE STUDIO - centrado sobre la imagen */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+                <h3
+                  className="font-handwriting text-[#E8E4DC] text-center leading-none"
+                  style={{
+                    fontSize: 'clamp(28px, 10vw, 14px)',
+                    transform: 'rotate(-5deg)',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                  }}
+                >
+                  THE STUDIO
+                </h3>
+              </div>
             </div>
           </div>
 

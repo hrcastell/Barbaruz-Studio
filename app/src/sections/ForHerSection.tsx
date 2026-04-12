@@ -56,7 +56,7 @@ const ForHerSection = () => {
 
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <h2
-                  className="text-7xl md:text-8xl lg:text-9xl text-[#E8E4DC] tracking-wider font-handwriting"
+                  className="text-[36px] md:text-[48px] lg:text-[64px] text-[#E8E4DC] tracking-wider font-handwriting"
                 >
                   For Her
                 </h2>

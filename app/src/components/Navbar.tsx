@@ -89,7 +89,7 @@ const Navbar = () => {
           {/* CUTCOLLECTION Button */}
           <button
             onClick={() => scrollToSection('cutcollection')}
-            className="hidden md:block px-6 py-2 bg-[#4A4540] text-[#E8E4DC] text-xs tracking-widest uppercase rounded hover:bg-[#5A5448] transition-colors duration-300 cursor-pointer"
+            className="hidden md:block px-6 py-2 bg-[#4A4540] text-[#E8E4DC] text-xs font-bold tracking-widest uppercase rounded hover:bg-[#5A5448] transition-colors duration-300 cursor-pointer"
           >
             CUTCOLLECTION
           </button>

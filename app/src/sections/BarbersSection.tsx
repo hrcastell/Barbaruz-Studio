@@ -65,7 +65,7 @@ const BarbersSection = () => {
                   hoveredId === barber.id ? 'bg-black/20' : 'bg-transparent'
                 }`}
               >
-                <h3 className="text-lg md:text-xl font-semibold tracking-wider text-[#E8E4DC] drop-shadow-lg">
+                <h3 className="text-lg md:text-xl font-handwriting tracking-wider text-[#E8E4DC] drop-shadow-lg">
                   {barber.name}
                 </h3>
               </div>
