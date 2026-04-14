@@ -62,7 +62,7 @@ const StudioSection = () => {
             <div
               className="relative overflow-hidden border-[0.91px] border-[#D5CFC1]"
               style={{
-                width: 'min(340px, 46vw)',
+                width: 'min(340px, 85vw)',
                 aspectRatio: '447 / 790',
                 maxHeight: '72vh',
                 borderRadius: 'min(45.25px, 6vw)'
