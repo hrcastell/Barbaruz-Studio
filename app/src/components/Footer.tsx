@@ -46,7 +46,7 @@ const Footer = () => {
               href="https://www.instagram.com/barbaruz.barber/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"
+              className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"
             >
               <img
                 src="./images/Logo BlancoRecurso 4@3x.png"
@@ -61,7 +61,7 @@ const Footer = () => {
               href="https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"
+              className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"
             >
               <img
                 src="./images/Logo BlancoRecurso 5@3x.png"
@@ -76,7 +76,7 @@ const Footer = () => {
               href="https://api.whatsapp.com/send/?phone=56961537430&text=%C2%A1Hola%21+vi+tu+p%C3%A1gina+de+BarbaruzStudio+y+me+gustar%C3%ADa+resolver+algunas+dudas&type=phone_number&app_absent=0"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"
+              className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"
             >
               <img
                 src="./images/Logo BlancoRecurso 6@3x.png"

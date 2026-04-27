@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Background Image - Modelos Portada */}
       <div className="absolute inset-0 flex items-center justify-center">
         <img
-          src="./images/hero-models1.png"
+          src="./images/Modelos-Portada_new.png"
           alt="Models"
           className="h-full w-auto object-contain"
           style={{ maxHeight: '1024px', maxWidth: '1880px' }}
