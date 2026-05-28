@@ -43,7 +43,7 @@ const Footer = () => {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/barbaruz.barber/"
+              href="https://www.instagram.com/barbaruzstudios/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"
@@ -58,7 +58,7 @@ const Footer = () => {
 
             {/* AgendaPro */}
             <a
-              href="https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377"
+              href="https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 md:w-9 md:h-9 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity duration-300"

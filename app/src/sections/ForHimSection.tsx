@@ -16,15 +16,15 @@ const services: Service[] = [
     price: '$28.990',
   },
   {
-    name: 'Everything ',
-    description: 'Corte · Barba · Rostro',
-    price: '$60.000',
-  },
-  {
     name: 'Therapy ',
     description: 'Corte de cabello · Tratamiento de barba Toalla/Vapor',
     price: '$32.990',
   },
+  {
+    name: 'Everything ',
+    description: 'Corte · Barba · Rostro',
+    price: '$60.000',
+  },  
   {
     name: 'Texture',
     description: 'Ondulación · Volumen',
@@ -69,7 +69,7 @@ const ForHimSection = () => {
             </div>
 
             <a
-              href="https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377"
+              href="https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377"
               target="_blank"
               rel="noreferrer"
               className="text-sm md:text-base text-[#E8E4DC] underline underline-offset-4 hover:text-[#D5CFC1] transition-colors"

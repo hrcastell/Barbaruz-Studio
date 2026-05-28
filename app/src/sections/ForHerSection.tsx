@@ -70,7 +70,7 @@ const ForHerSection = () => {
             </div>
 
             <a
-              href="https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377"
+              href="https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377"
               target="_blank"
               rel="noreferrer"
               className="text-sm md:text-base text-[#E8E4DC] underline underline-offset-4 hover:text-[#D5CFC1] transition-colors"

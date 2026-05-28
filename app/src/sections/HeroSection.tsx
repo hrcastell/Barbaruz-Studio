@@ -40,7 +40,7 @@ const HeroSection = () => {
 
         {/* RESERVA Button */}
         <a
-          href="https://barbaruzantofagasta.site.agendapro.com/cl/sucursal/167377"
+          href="https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377"
           target="_blank"
           rel="noopener noreferrer"
           className="px-12 py-3 bg-[#8B8378] text-[#E8E4DC] text-sm font-bold uppercase rounded hover:bg-[#9A9080] transition-all duration-400 cursor-pointer"
