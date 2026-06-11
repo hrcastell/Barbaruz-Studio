@@ -12,7 +12,7 @@ const barbers: Barber[] = [
   { id: 2, name: 'TOWER', image: './images/TOWER.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/532850' },
   { id: 3, name: 'BRAULIO', image: './images/BRAULIO.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/375300' },
   { id: 4, name: 'VITALI', image: './images/VITALI.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/463540' },
-  { id: 5, name: 'BUENO', image: './images/BUENO.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/704084' },
+  //{ id: 5, name: 'BUENO', image: './images/BUENO.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/704084' },
   { id: 6, name: 'JOAN', image: './images/JOAN.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/375303' },
   { id: 7, name: 'CAICEDO', image: './images/CAICEDO.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/375304' },
   { id: 8, name: 'ALARCÓN', image: './images/ALARCON.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/533665' },
