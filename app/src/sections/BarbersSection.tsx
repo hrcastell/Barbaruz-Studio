@@ -8,7 +8,7 @@ interface Barber {
 }
 
 const barbers: Barber[] = [
-  { id: 1, name: 'KOTE', image: './images/KOTE.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/566163' },
+  //{ id: 1, name: 'KOTE', image: './images/KOTE.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/566163' },
   { id: 2, name: 'TOWER', image: './images/TOWER.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/532850' },
   { id: 3, name: 'BRAULIO', image: './images/BRAULIO.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/375300' },
   { id: 4, name: 'VITALI', image: './images/VITALI.png', link: 'https://barbaruzstudios.site.agendapro.com/cl/sucursal/167377/profesional/463540' },
@@ -27,14 +27,14 @@ const BarbersSection = () => {
       {/* Background - Degradado Oscuro a Claro */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#1D1C19] to-[#837E71]" />
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-6">
           {barbers.map((barber) => (
             <a
               key={barber.id}
               href={barber.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative overflow-hidden transition-all duration-500 w-full max-w-[300px] aspect-square"
+              className="group relative overflow-hidden transition-all duration-500 w-[calc(50%-0.375rem)] md:w-[calc(25%-1.125rem)] max-w-[300px] aspect-square"
               style={{
                 border: '1px solid #D5CFC1',
                 borderRadius: '20px'
